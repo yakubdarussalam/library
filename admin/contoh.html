@@ -1,0 +1,118 @@
+<table id="data-table">
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Data</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Data awal dapat ditampilkan di sini -->
+        <tr>
+            <td>1</td>
+            <td>Data 1</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Data 2</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Data 3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Data 4</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Data 5</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Data 6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Data 5</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Data 5</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Data 5</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Data 5</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>Data 5</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>Data 5</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Data 5</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Data 5</td>
+        </tr>
+    </tbody>
+</table>
+
+<label for="limit">Tampilkan jumlah data:</label>
+<select id="limit" onchange="updateTable()">
+    <option value="5" selected>5</option>
+    <option value="10">10</option>
+    <option value="20">20</option>
+</select>
+
+<script>
+function updateTable() {
+    var limit = parseInt(document.getElementById("limit").value, 10);
+    var table = document.getElementById("data-table").getElementsByTagName('tbody')[0];
+    var rows = table.getElementsByTagName('tr');
+    
+    // Sembunyikan semua baris terlebih dahulu
+    for (var i = 0; i < rows.length; i++) {
+        rows[i].style.display = "none";
+    }
+
+    // Tampilkan baris sesuai dengan limit
+    for (var i = 0; i < limit && i < rows.length; i++) {
+        rows[i].style.display = "table-row";
+    }
+}
+
+function searchTable() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("search");
+            filter = input.value.toLowerCase();
+            table = document.getElementById("data-table");
+            tr = table.getElementsByTagName("tr");
+
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[1]; // Mengambil kolom data untuk pencarian
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "table-row";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+
+        function searchOnEnter(event) {
+            if (event.key === "Enter") {
+                searchTable();
+            }
+        }
+</script>

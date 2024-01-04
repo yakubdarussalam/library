@@ -1,0 +1,13 @@
+Dashboard Admin
+
+-> Admin :
+Kelola Data User
+Kelola Data Barang
+Kelola Data Kategori Barang
+Kelola Pesanan
+Kelola Transaksi
+
+-> Kasir :
+Tambah, Edit Data Barang
+Tambah, dan Edit Pesanan
+Tambah dan Edit Transaksi
