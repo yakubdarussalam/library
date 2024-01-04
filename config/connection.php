@@ -2,7 +2,7 @@
 $host = "localhost";  // Ganti dengan host database Anda
 $user = "root";       // Ganti dengan username database Anda
 $pass = "";   // Ganti dengan password database Anda
-$dbname = "perpustakaan";  // Ganti dengan nama database yang ingin Anda gunakan
+$dbname = "library";  // Ganti dengan nama database yang ingin Anda gunakan
 
 // Membuat koneksi ke database
 $conn = mysqli_connect($host, $user, $pass, $dbname);

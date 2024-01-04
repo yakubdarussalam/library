@@ -76,3 +76,10 @@ else if($_GET['module']=="return"){
 } else if($module === 'delete_return' && !empty($returnId)){
     include "module/return/delete_return_action.php";
 }
+
+
+else if ($_GET['module'] == "report") {
+    include "module/report/taker_report.php";
+} else if ($_GET['module'] == "takerbookreport") {
+    include "module/report/taker_book_report.php";
+} 
