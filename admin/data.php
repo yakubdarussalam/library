@@ -7,6 +7,7 @@ $memberId = isset($_GET['member']) ? $_GET['member'] : '';
 $takerId = isset($_GET['taker']) ? $_GET['taker'] : '';
 $bookId = isset($_GET['bookId']) ? $_GET['bookId'] : '';
 $returnId = isset($_GET['return']) ? $_GET['return'] : '';
+$returnDetail = isset($_GET['return_detail']) ? $_GET['return_detail'] : '';
 
 if($_GET['module']=="book"){
     include "data/book.php";
@@ -75,4 +76,23 @@ else if($_GET['module']=="return"){
     include "module/return/edit_return.php";
 } else if($module === 'delete_return' && !empty($returnId)){
     include "module/return/delete_return_action.php";
-}
+} else if ($module === 'return_detail' && !empty($returnId)) {
+    $Return = $_GET['return']; // Ambil nilai 'book' dari URL
+    include "module/return/return_detail.php";
+} else if ($module === 'add_return_book' && !empty($returnId)) {
+    $Return = $_GET['return']; 
+    include "module/return/add_return_book.php";
+} else if($module === 'edit_return_book' && !empty($returnId) && !empty($returnDetail)){
+    $Return = $_GET['return'];
+    $Detail = $_GET['return_detail'];
+    include "module/return/edit_return_book.php";
+} else if($module === 'delete_return_book' && !empty($returnId) && !empty($returnDetail)){
+    include "module/return/delete_return_book_action.php";
+} 
+
+
+else if ($_GET['module'] == "report") {
+    include "module/report/taker_report.php";
+} else if ($_GET['module'] == "taker_book_report") {
+    include "module/report/taker_book_report.php";
+} 

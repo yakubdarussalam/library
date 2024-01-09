@@ -15,7 +15,7 @@
         </div>
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0">Dashboard</h1>
+                <h1 class="m-0">Data</h1>
             </div><!-- /.col -->
 
             <div class="col-sm-6">
@@ -73,6 +73,7 @@
                                     <th class='text-center'>Name</th>
                                     <th class='text-center'>Username</th>
                                     <th class='text-center'>Password</th>
+                                    <th class='text-center'>Level</th>
                                     <th class='text-center'>Gender</th>
                                     <th class='text-center'>Photo</th>
                                 </tr>
@@ -105,6 +106,7 @@
                                     echo "<td class='text-center'>" . $row['staff_name'] . "</td>";
                                     echo "<td class='text-center'>" . $row['staff_username'] . "</td>";
                                     echo "<td class='text-center'>" . $row['staff_password'] . "</td>";
+                                    echo "<td class='text-center'>" . $row['level'] . "</td>";
                                     echo "<td class='text-center'>" . $row['staff_gender'] . "</td>";
                                     echo "<td class='text-center'>" . $row['staff_photo'] . "</td>";
                                     echo "<td class='text-center'>";

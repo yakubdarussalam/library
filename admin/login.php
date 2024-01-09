@@ -9,7 +9,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6 offset-md-3">
-            <div class="card my-4">
+            <div class="card my-5">
 
                 <form class="card-body p-lg-5" method="POST" action="login_check.php">
                             <h2 class="text-center text-dark mt-1 mb-1">Login</h2>

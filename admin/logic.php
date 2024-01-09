@@ -9,6 +9,7 @@ $memberId = isset($_GET['member']) ? $_GET['member'] : '';
 $takerId = isset($_GET['taker']) ? $_GET['taker'] : '';
 $bookId = isset($_GET['bookId']) ? $_GET['bookId'] : '';
 $returnId = isset($_GET['return']) ? $_GET['return'] : '';
+$returnDetail = isset($_GET['return_detail']) ? $_GET['return_detail'] : '';
 
 //Title
 if($modules=="book"){
@@ -61,6 +62,14 @@ elseif ($modules=="add_return_data") {
     $title = "Add Return";
 } elseif ($module === 'edit_return' && !empty($returnId)) {
     $title = "Edit Return";
+} elseif ($module === 'return_detail' && !empty($returnId)) {
+    $title = "Detail Return";
+} elseif ($module === 'edit_return_book' && !empty($returnId) && !empty($returnDetail)) {
+    $title = "Edit Return Book";
+} 
+
+elseif ($modules=="taker_book_report") {
+    $title = "Report";
 } 
 
 

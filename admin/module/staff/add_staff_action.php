@@ -8,6 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST["staff_name"];
     $username = $_POST["staff_username"];
     $password = $_POST["staff_password"];
+    $level = $_POST["level"];
     $gender = $_POST["staff_gender"];
     $photo = $_POST["staff_photo"];
 
@@ -18,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     // Jika tidak ada error, simpan data ke database
     if (empty($errors)) {
-        $sql = "INSERT INTO staff (staff_id, staff_name, staff_username, staff_password, staff_gender, staff_photo) VALUES ('$id', '$name', '$username', '$password', '$gender','$photo')";
+        $sql = "INSERT INTO staff (staff_id, staff_name, staff_username, staff_password, level, staff_gender, staff_photo) VALUES ('$id', '$name', '$username', '$password','$level', '$gender','$photo')";
         session_start();
         if (mysqli_query($conn, $sql)) {
             // Data berhasil disimpan

@@ -49,6 +49,10 @@
                                 <input type="password" class="form-control" id="exampleInputEmail1" name="staff_password" maxlength="30" placeholder="********" required>
                             </div>
                             <div class="form-group">
+                                <label for="">Level</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" name="level" maxlength="50" placeholder="Enter Level" required>
+                            </div>
+                            <div class="form-group">
                                 <label for="exampleSelectRounded0">Gender</label>
                                 <select class="custom-select rounded-0" id="exampleSelectRounded0" name="staff_gender" placeholder="Select Gender" required >
                                     <option>Male</option>

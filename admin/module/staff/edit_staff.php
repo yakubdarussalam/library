@@ -68,6 +68,10 @@
                                 <input type="password" class="form-control" id="exampleInputEmail1" name="staff_password" maxlength="30" placeholder="" value="<?php echo $staffData['staff_password']; ?>" required>
                             </div>
                             <div class="form-group">
+                                <label for="">Level</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" name="level" maxlength="50" placeholder="" value="<?php echo $staffData['level']; ?>" required>
+                            </div>
+                            <div class="form-group">
                                 <label for="exampleSelectRounded0">Gender</label>
                                 <select class="custom-select rounded-0" id="exampleSelectRounded0" name="staff_gender" placeholder="Select Gender" required >
                                     <option <?php if ($staffData['staff_gender'] == 'Male') echo 'selected'; ?>>Male</option>

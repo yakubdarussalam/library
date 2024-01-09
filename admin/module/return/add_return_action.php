@@ -5,9 +5,6 @@ include "../../../config/connection.php";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Ambil data dari formulir
     $member_id = $_POST["member_id"];
-    $staff_id = $_POST["staff_id"];
-    $date = $_POST["date"];
-    $time = $_POST["time"];
 
     // Validasi data
     $errors = [];
@@ -16,18 +13,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     // Jika tidak ada error, simpan data ke database
     if (empty($errors)) {
-        $sql = "INSERT INTO taker (member_id, staff_id, date , time) VALUES ('$member_id', '$staff_id', '$date', '$time')";
+        $sql = "INSERT INTO return_book (member_id) VALUES ('$member_id')";
         session_start();
         if (mysqli_query($conn, $sql)) {
             // Data berhasil disimpan
             $_SESSION['success_message'] = "Input Data Success";
-            header("Location: ../../dashboard.php?module=taker");
+            header("Location: ../../dashboard.php?module=return");
             
         } else {
             // Terjadi kesalahan
             $errors[] = "Error: " . mysqli_error($conn);
             $_SESSION['error_message'] = $errors;
-            header("Location: ../../dashboard.php?module=taker");
+            header("Location: ../../dashboard.php?module=return");
         }
         
     }

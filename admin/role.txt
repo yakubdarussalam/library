@@ -11,3 +11,6 @@ Kelola Transaksi
 Tambah, Edit Data Barang
 Tambah, dan Edit Pesanan
 Tambah dan Edit Transaksi
+
+-> Anggota :
+View Data Buku & Profil
