@@ -192,14 +192,7 @@ if (isset($_SESSION['level']) && $_SESSION['level'] == 'staff') {
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="?module=user" class="nav-link <?php if ($modules == "user") echo 'active'; ?>">
-                                <i class="nav-icon fa-solid fa-users"></i>
-                                <p>
-                                    User
-                                </p>
-                            </a>
-                        </li>
+                        
                         <li class="nav-item">
                             <a href="logout.php" class="nav-link">
                                 <i class="nav-icon fa-solid fa-right-from-bracket" style="color: red;"></i>

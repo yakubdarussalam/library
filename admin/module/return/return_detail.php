@@ -95,7 +95,7 @@
                             <thead>
                                 <tr>
                                     <th class='text-center'>No</th>
-                                    <th class='text-center'>Book ID</th>
+                                    <th class='text-center'>Book Name</th>
                                     <th class='text-center'>Return Date</th>
                                     <th class='text-center'>Penalty</th>
                                     <th class='text-center'>Description</th>
